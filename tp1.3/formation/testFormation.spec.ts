@@ -52,19 +52,19 @@ describe('Formation', () => {
             expect(personne.boire(boisson1))
             .to.equal(`La boisson ${boisson1.nom} ne peut pas être bu, elle est ni alcolisé, ni bio`);
         });
-        it('renvoie que la boisson peut etre bu', () => {
+        it('renvoie qu\'il manque un nom a la boisson', () => {
         
             expect(personne.boire(boisson2)).to.equal(`Veuillez ajouter un nom a la boisson`);
         });
     });
     describe('fonction toString', () => {
-        it('renvoie que le prenom et le nom de la personne', () => {
+        it('renvoie le prenom et le nom de la personne', () => {
         
             expect(personne.toString()).to.equal(`${personne.prenom} ${personne.nom}`);
         });
     });
     describe('fonction enseigner', () => {
-        it('renvoie connaissance connaissance3 ', () => {
+        it('renvoie les connaissannce de plus de 2 ans (connaissance connaissance3 )', () => {
         
             expect(formateur.enseigner()).to.equal(`${connaissance.nom} ${connaissance3.nom} `);
         });
